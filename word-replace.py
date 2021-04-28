@@ -5,6 +5,7 @@ document = Document('ShaunB_CV_Template.docx')
 
 
 def WordReplace(document, dictionary):
+
     for p in document.paragraphs:
         inline = p.runs
         for i in range(len(inline)):
@@ -17,8 +18,7 @@ def WordReplace(document, dictionary):
 def GetInput():
     job = input("Job Name: ")
     comp = input("Comp Name: ")
-    date = input("Date: ")
-    dic = {'JOBNAME': job, 'COMPNAME': comp, 'CURRENTDATE': date}
+    dic = {'JOBNAME': job, 'COMPNAME': comp}
     return dic
 
 
